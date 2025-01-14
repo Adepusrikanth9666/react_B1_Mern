@@ -40,13 +40,18 @@ const StateHook = () => {
   const handleReset = () => {
     setIncrementValue(0);
   };
-
+  
+  const handleDecrement=()=>{
+    let value=incrementValue-1;
+    setIncrementValue(value);
+  }
   return (
     <div>
       <h1>This is my First UseState Hook</h1>
       {incrementValue}
       <button onClick={handleIncrement}>Increment</button>
       <button onClick={handleReset}>Reset</button>
+      <button onClick={handleDecrement}>Decrement</button>
       <h1>We Are Creating Tally counter with Increment and reset</h1>
     </div>
   );
