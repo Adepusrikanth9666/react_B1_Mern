@@ -4,7 +4,7 @@
 //  hOOKS HAS BEEN INTRODUCED IN FUNCTIONAL COMPONENTS
 // THere are Differetn types of Hooks
 // -> UseState
-// -> UseEffect
+// -> UseEffect - side effects ,Dom manipulations
 // -> UseContext
 // -> UseMEmo
 // ->UseLayout

@@ -3,6 +3,7 @@ import "./App.css";
 import NewComponet from "./NewComponent";
 import { Component_1, Component_2, Component_3 } from "./Components";
 import StateHook from "./Hooks/hooks";
+import UseEffectHook from "./Hooks/useEffectHook";
 
 function App() {
   const emp_data = {
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <UseEffectHook />
         <h1>Hello World!!!!!!! This is my first React Project Hureyy!!!</h1>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
