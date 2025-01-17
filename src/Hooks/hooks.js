@@ -6,8 +6,11 @@
 // -> UseState
 // -> UseEffect - side effects ,Dom manipulations
 // -> UseContext
+// ->useReducer hook
+// ->useCallback hook
+// -> useRef hook
 // -> UseMEmo
-// ->UseLayout
+// ->useLayoutEffect hook
 // etc..... lot more....
 // Custom Hooks (Imp to learn)
 

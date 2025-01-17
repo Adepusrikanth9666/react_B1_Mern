@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useContext } from "react";
+import Context from "./Hooks/Context";
+import { empInfoContext } from "./App";
 
-const NewComponet = function (props) {
-  const { employeeData, name } = props;
-  console.log(employeeData);
+const NewComponet = function () {
+  const empData = useContext(empInfoContext);
 
   // Destructuring *****
 
@@ -40,8 +41,9 @@ const NewComponet = function (props) {
         <h1>{list}</h1>
       ))}
       {age > 18 ? <h1>im Adult</h1> : <h1>Imm Child</h1>}
-      {JSON.stringify(employeeData)}
-      {name}
+      {JSON.stringify(empData)}
+
+      <Context />
     </div>
   );
 };
