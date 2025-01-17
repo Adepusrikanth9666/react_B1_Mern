@@ -5,16 +5,46 @@ import { Component_1, Component_2, Component_3 } from "./Components";
 import StateHook from "./Hooks/hooks";
 import UseEffectHook from "./Hooks/useEffectHook";
 import DataEffect from "./Hooks/userEffect";
+import Context from "./Hooks/context"
+import { createContext } from "react";
+import Usecontext from './Hooks/useContext';
 
+
+
+
+export const MovieInfoContext=createContext();
+export let dataContext=createContext();
 function App() {
+ 
   const emp_data = {
     emp_name: "Jhon",
     emp_id: 123,
     address: "UK",
   };
+
+  const movie_info={
+    title:"surya",
+    rating:4.5,
+    yearofRel:2020,
+    hero:"surya",
+    heroine:"tamanna",
+    genre:"action"
+  }
+  
+  const names=["React","JavaScript","Java","CSS","HTML"]
+  
+
   return (
     <div className="App">
       <header className="App-header">
+        
+        <MovieInfoContext.Provider value={movie_info}>
+          <Usecontext/>
+        </MovieInfoContext.Provider>
+
+        <dataContext.Provider value={names}>
+          <Context/>
+        </dataContext.Provider>
         <DataEffect/>
         <UseEffectHook />
         <h1>Hello World!!!!!!! This is my first React Project Hureyy!!!</h1>
