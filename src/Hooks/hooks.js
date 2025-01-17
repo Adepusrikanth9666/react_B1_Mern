@@ -31,21 +31,29 @@ import { useState } from "react";
 
 const StateHook = () => {
   const [incrementValue, setIncrementValue] = useState(0);
+  const [decrementValuue, setDecrementValue] = useState(0);
 
   const handleIncrement = () => {
     let updateValue = incrementValue + 1;
     setIncrementValue(updateValue);
   };
+  const handleDecrement = () => {
+    let updateValue = decrementValuue - 1;
+    setDecrementValue(updateValue);
+  };
 
   const handleReset = () => {
     setIncrementValue(0);
+    setDecrementValue(0);
   };
 
   return (
     <div>
       <h1>This is my First UseState Hook</h1>
       {incrementValue}
+      {decrementValuue}
       <button onClick={handleIncrement}>Increment</button>
+      <button onClick={handleDecrement}>Decrement</button>
       <button onClick={handleReset}>Reset</button>
       <h1>We Are Creating Tally counter with Increment and reset</h1>
     </div>
