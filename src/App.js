@@ -6,9 +6,8 @@ import StateHook from "./Hooks/hooks";
 import UseEffectHook from "./Hooks/useEffectHook";
 import Context from "./Hooks/Context";
 import { createContext } from "react";
-
-export const empInfoContext = createContext();
 import DataEffect from "./Hooks/userEffect";
+export const empInfoContext = createContext();
 
 function App() {
   const emp_data = {
