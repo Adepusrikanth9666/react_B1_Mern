@@ -8,6 +8,7 @@ import Context from "./Hooks/Context";
 import { createContext } from "react";
 
 export const empInfoContext = createContext();
+import DataEffect from "./Hooks/userEffect";
 
 function App() {
   const emp_data = {
