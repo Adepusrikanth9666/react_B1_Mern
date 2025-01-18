@@ -4,10 +4,13 @@
 //  hOOKS HAS BEEN INTRODUCED IN FUNCTIONAL COMPONENTS
 // THere are Differetn types of Hooks
 // -> UseState
-// -> UseEffect
+// -> UseEffect - side effects ,Dom manipulations
 // -> UseContext
+// ->useReducer hook
+// ->useCallback hook
+// -> useRef hook
 // -> UseMEmo
-// ->UseLayout
+// ->useLayoutEffect hook
 // etc..... lot more....
 // Custom Hooks (Imp to learn)
 
