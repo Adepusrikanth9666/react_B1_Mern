@@ -7,6 +7,8 @@ import UseEffectHook from "./Hooks/useEffectHook";
 import Context from "./Hooks/Context";
 import { createContext } from "react";
 import DataEffect from "./Hooks/userEffect";
+import UseReducerHooks from "./Hooks/useReducerHooks";
+import UseREfHook from "./Hooks/UseREfHook";
 export const empInfoContext = createContext();
 
 function App() {
@@ -31,6 +33,8 @@ function App() {
     <empInfoContext.Provider value={emp_data}>
       <div className="App">
         <header className="App-header">
+          <UseReducerHooks />
+          <UseREfHook />
           <UseEffectHook />
           <h1>Hello World!!!!!!! This is my first React Project Hureyy!!!</h1>
           <img src={logo} className="App-logo" alt="logo" />
