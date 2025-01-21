@@ -16,6 +16,7 @@ function cartReducer(state, action) {
 const UseReducerHooks = () => {
   // const [value, setValue] = useState([]);
   const [cart, dispatch] = useReducer(cartReducer, []);
+  const [wishlist, setWishlist] = useState([]); // Wishlist state
 
   const addItem = (item) => {
     //{ id: 1, name: "item 1", price: "12345"}
@@ -25,6 +26,13 @@ const UseReducerHooks = () => {
   console.log(cart);
   const removeItem = (item) => {
     dispatch({ type: "remove", payload: item });
+  };
+  const addToWishlist = (item) => {
+    
+    if (!wishlist.some((wishItem) => wishItem.id === item.id)) {
+      setWishlist((prev) => [...prev, item]);
+      removeItem(item); 
+    }
   };
 
   return (
@@ -37,6 +45,8 @@ const UseReducerHooks = () => {
           <li>
             {cartItem.name} - {cartItem.price}
             <button onClick={() => removeItem(cartItem)}>remove</button>
+            <button onClick={() => addToWishlist(cartItem)}>Add to Wishlist</button>
+
           </li>
         ))}
       </ul>
@@ -52,6 +62,16 @@ const UseReducerHooks = () => {
       >
         Add
       </button>
+
+      <h3>Wishlist</h3>
+      <ul>
+        {wishlist.map((wishItem) => (
+          <li key={wishItem.id}>
+            {wishItem.name} - {wishItem.price}
+          </li>
+        ))}
+      </ul>
+
     </div>
   );
 };
