@@ -9,6 +9,9 @@ import { createContext } from "react";
 import DataEffect from "./Hooks/userEffect";
 import UseReducerHooks from "./Hooks/useReducerHooks";
 import UseREfHook from "./Hooks/UseREfHook";
+import UseCallbackHook from "./Hooks/UseCallbackHook";
+import UseMemoHook from "./Hooks/UseMemoHook";
+import UseLayoutEffectHook from "./Hooks/UseLayoutEffectHook";
 export const empInfoContext = createContext();
 
 function App() {
@@ -35,6 +38,9 @@ function App() {
         <header className="App-header">
           <UseReducerHooks />
           <UseREfHook />
+          <UseCallbackHook />
+          <UseMemoHook />
+          <UseLayoutEffectHook />
           <UseEffectHook />
           <h1>Hello World!!!!!!! This is my first React Project Hureyy!!!</h1>
           <img src={logo} className="App-logo" alt="logo" />
