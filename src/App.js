@@ -12,9 +12,19 @@ import UseREfHook from "./Hooks/UseREfHook";
 import UseCallbackHook from "./Hooks/UseCallbackHook";
 import UseMemoHook from "./Hooks/UseMemoHook";
 import UseLayoutEffectHook from "./Hooks/UseLayoutEffectHook";
+import WindowWidthComp from "./components/windowWidthComp";
+import LoginPage from "./components/LoginPage";
+import DashboardPage from "./components/DashboardPage";
+import CheckoutPage from "./components/CheckoutPage";
+import PaymentPage from "./components/PaymentPage";
+import { Routes, Route } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import UserInfo from "./components/UserInfo";
+
 export const empInfoContext = createContext();
 
 function App() {
+  const navigate = useNavigate();
   const emp_data = {
     emp_name: "Jhon",
     emp_id: 123,
@@ -35,14 +45,35 @@ function App() {
   return (
     <empInfoContext.Provider value={emp_data}>
       <div className="App">
+        <button onClick={() => navigate("/")}>DashboardPage</button>
+        <button onClick={() => navigate("/login")}>LoginPage</button>
+        <button onClick={() => navigate("/mywebsite/checkout")}>
+          CheckoutPage
+        </button>
+        <button onClick={() => navigate("/payment")}>PaymentPage</button>
         <header className="App-header">
-          <UseReducerHooks />
+          <div>
+            <Routes>
+              <Route path="/login" element={<LoginPage />} />
+              <Route path="/" element={<DashboardPage />} />
+              <Route path="/mywebsite/checkout" element={<CheckoutPage />} />
+              <Route path="/payment" element={<PaymentPage />} />
+              <Route path="/user/:cartid" element={<UserInfo />} />
+            </Routes>
+          </div>
+          {/* <UseReducerHooks />
+          <WindowWidthComp />
           <UseREfHook />
           <UseCallbackHook />
           <UseMemoHook />
           <UseLayoutEffectHook />
-          <UseEffectHook />
-          <h1>Hello World!!!!!!! This is my first React Project Hureyy!!!</h1>
+          <UseEffectHook /> */}
+          {/* <LoginPage />
+          <DashboardPage />
+          <CheckoutPage />
+          <PaymentPage /> */}
+
+          {/* <h1>Hello World!!!!!!! This is my first React Project Hureyy!!!</h1>
           <img src={logo} className="App-logo" alt="logo" />
           <p>
             Edit <code>src/App.js</code> and save to reload.
@@ -53,23 +84,23 @@ function App() {
             <li>CSS</li>
             <li>JavaScript</li>
             <li>Node.js</li>
-          </ul>
+          </ul> */}
 
-          <a
+          {/* <a
             className="App-link"
             href="https://reactjs.org"
             target="_blank"
             rel="noopener noreferrer"
           >
             Learn React
-          </a>
-          {JSON.stringify(emp_data)}
+          </a> */}
+          {/* {JSON.stringify(emp_data)} */}
           {/* Props */}
-          <NewComponet />
+          {/* <NewComponet />
           <Component_1 />
           <Component_2 />
           <Component_3 />
-          <StateHook />
+          <StateHook /> */}
         </header>
       </div>
     </empInfoContext.Provider>
