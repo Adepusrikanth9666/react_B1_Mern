@@ -97,7 +97,7 @@ function App() {
           {/* {JSON.stringify(emp_data)} */}
           {/* Props */}
           {/* <NewComponet />
-          <Component_1 />
+          <Component_1 name ="john" email ="jhon@email.com" />
           <Component_2 />
           <Component_3 />
           <StateHook /> */}

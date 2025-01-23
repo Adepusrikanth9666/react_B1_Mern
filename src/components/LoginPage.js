@@ -1,4 +1,5 @@
 import React from "react";
+import Welcome from "./WelcomeComp";
 
 const LoginPage = () => {
   return (
@@ -10,6 +11,7 @@ const LoginPage = () => {
         effects ,Dom manipulations // UseContextuseReducer hook - function and
         intial value`
       </p>
+      <Welcome name="john" email="jhon@email.com" />
     </div>
   );
 };
