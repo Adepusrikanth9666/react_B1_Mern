@@ -31,7 +31,7 @@ const UseReducerHooks = () => {
     
     if (!wishlist.some((wishItem) => wishItem.id === item.id)) {
       setWishlist((prev) => [...prev, item]);
-      removeItem(item); 
+     
     }
   };
 
