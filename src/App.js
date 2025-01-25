@@ -61,13 +61,13 @@ function App() {
               <Route path="/user/:cartid" element={<UserInfo />} />
             </Routes>
           </div>
-          {/* <UseReducerHooks />
+          <UseReducerHooks/>
           <WindowWidthComp />
           <UseREfHook />
           <UseCallbackHook />
           <UseMemoHook />
           <UseLayoutEffectHook />
-          <UseEffectHook /> */}
+          <UseEffectHook /> */
           {/* <LoginPage />
           <DashboardPage />
           <CheckoutPage />
